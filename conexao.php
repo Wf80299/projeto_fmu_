@@ -43,10 +43,10 @@ if (isset($_POST["submit"])) {
     if (mysqli_query($mysqli, $sql_cadastro)) {
       print_r('<br>');
       echo "Email e senha cadastrada ";
+      header('Location: index.html');
     } else echo "Erro de cadastramento " . mysqli_error($myslqi); // Caso os dados não seja enviado para tabela cadastro
   } else echo "Erro no cadastramento do usuario  " . mysqli_error($mysqli); // Caso os dados não seja enviado para tabela pessoa
-} else echo "Erro no formulario " . mysqli_error($mysqli); // Se ouver erro e não entra dados no formulario 
-
+}
 /* Fim da estrutura de envio de dados do formulario para o banco de dados */
 
 // Mostar os erros  
