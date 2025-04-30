@@ -34,6 +34,7 @@ if (isset($_POST['email']) || isset($_POST['password'])) {
 
             header('Location: leadingpage.html'); // Direcionar para o arquivo leadingpage.hmtl
         } else {
+            header('Location: index.html');
             echo "Email ou senha incorreto";
         }
     }
